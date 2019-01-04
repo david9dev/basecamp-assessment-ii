@@ -7,6 +7,13 @@
 
 // CODE HERE
 
+var me = 
+{
+  firstname: "David",
+  age: 24,
+  state: "Stressed"
+}
+
 /**
  * #2
  *
@@ -15,6 +22,7 @@
  */
 
 // CODE HERE
+me.faveColor = "Blue";
 
 /**
  * #3
@@ -30,6 +38,7 @@ var message = {
 };
 // DON'T TOUCH THE CODE ABOVE
 // CODE HERE
+message["text"] = "Some sample text";
 
 /**
  * #4
@@ -40,7 +49,19 @@ var message = {
  */
 
 // CODE HERE
-
+var adjustCount = 
+{
+  upVote: function(num)
+  {
+    num += 1;
+    return num;
+  },
+  downVote: function(num)
+  {
+    num -= 1;
+    return num;
+  }
+}
 /**
  * #5
  *
@@ -48,6 +69,7 @@ var message = {
  */
 
 // CODE HERE
+var myFriends = ["Josh","Jayce","Charles","Willie"];
 
 /**
  * #6
@@ -56,6 +78,7 @@ var message = {
  */
 
 // CODE HERE
+myFriends.push("Ann-Marie");
 
 /**
  * #7
@@ -68,11 +91,12 @@ var message = {
 var myArray = [1, 2, 3, 4];
 // DON'T TOUCH THE CODE ABOVE
 // CODE HERE
+var myArrayCopy = myArray;
 
 /**
  * #8
  *
- * Below is a array, 'myNumbers'. Create a function called 'evensOnly'
+ * Below is an array, 'myNumbers'. Create a function called 'evensOnly'
  * that returns an array of only even numbers.
  */
 
@@ -81,6 +105,11 @@ var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
 function evensOnly() {
   // CODE HERE
+  let filterFunc = function(curVal)
+  {
+    return curVal%2 === 0;
+  }
+  return myNumbers.filter(filterFunc);
 }
 
 /**
@@ -100,6 +129,12 @@ var peopleIknow = [
   { name: "Holly", friend: true }
 ];
 
+
+var trueFriends = peopleIknow.filter(function (curVal)
+{
+  return curVal.friend;
+});
+
 /**
  * #10
  *
@@ -110,3 +145,14 @@ var peopleIknow = [
  */
 
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
+var indexes;
+var indexFinder = function()
+{
+  let array = [];
+  for(let i = 0; i < randomNumbers.length; i++)
+  {
+    array.push(i);
+  }
+  return array
+}
+indexes = indexFinder();
